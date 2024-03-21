@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Book
+
+<div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <p class="card-text">Author: @Model.Author</p>
+            <p class="card-text">Publisher: @Model.Publisher</p>
+            <p class="card-text">ISBN: @Model.Isbn</p>
+            <p class="card-text">Classification/Category: @Model.Category</p>
+            <p class="card-text">Number of Pages: @Model.PageCount</p>
+            <p class="card-text">Price: $@Model.Price</p>
+            <button class="btn btn-add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</div>

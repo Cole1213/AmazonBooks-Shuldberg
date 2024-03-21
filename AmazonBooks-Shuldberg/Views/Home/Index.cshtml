@@ -1,0 +1,20 @@
+﻿@using AmazonBooks_Shuldberg.Models.ViewModels
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model BooksViewModel
+
+<div>
+    <h3 class="display-4">Check out Hilton's recommended books below:</h3>
+    <div class="container">
+        <div class="row">
+            @foreach (Book b in Model.Books)
+            {
+                <partial name="BooksSummary" model="b" />
+            }
+        </div>
+    </div>
+    
+
+    <div page-model="@Model.PaginationInfo" page-action="Index" page-class-enabled="true" page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary" class="btn-group"></div>
+</div>
